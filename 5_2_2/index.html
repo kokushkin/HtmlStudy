@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        // Сохранить какие-нибудь данные для примера
+        window.onload = function () {
+            // Сохранить какие-нибудь данные
+            localStorage.mynumber = 5;
+
+            // Получить число при считывании
+            var x = Number(localStorage.mynumber);
+
+            // Проверяем (если не использовать приведение к типу Number,
+            // результатом будет строка "520")
+            alert(x + 20);
+
+            // Создаем новый объект даты
+            var today = new Date();
+
+            // Преобразуем дату в тестовую строку в формате ГГГГ/ММ/ДД 
+            // и сохраняем эту строку
+            sessionStorage.session_started = today.getFullYear() +
+                "/" + today.getMonth() + "/" + today.getDate();
+
+            // Теперь извлекаем из хранилища строку даты и с ее помощью 
+            // создаем новый объект Date.
+            // Это возможно благодаря распознаваемому формату текста даты
+            today = new Date(sessionStorage.session_started);
+
+            alert(today.getFullYear());
+        }
+    </script>
+</body>
+
+</html>

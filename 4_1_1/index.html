@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Canvas</title>
+    <style>
+        canvas {
+            border: 1px dashed black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("drawingCanvas");
+            var context = canvas.getContext("2d");
+
+            // Код для рисования вставляется сюда
+
+            // // Толщина и цвет для всех линий
+            // context.lineWidth = 20;
+            // context.strokeStyle = "rgb(16,155,252)";
+
+            // // Линия с концами типа butt
+            // context.moveTo(10, 50);
+            // context.lineTo(400, 50);
+            // context.stroke();
+
+            // // Линия с концами типа round
+            // context.beginPath();
+            // context.moveTo(10, 120);
+            // context.lineTo(400, 120);
+            // context.lineCap = "round";
+            // context.stroke();
+
+            // // Линия с концами типа square
+            // context.beginPath();
+            // context.moveTo(10, 190);
+            // context.lineTo(400, 190);
+            // context.lineCap = "square";
+            // context.stroke();
+
+
+
+
+            // context.moveTo(250, 50);
+            // context.lineTo(50, 250);
+            // context.lineTo(450, 250);
+            // context.closePath();
+
+            // // Заливка
+            // context.fillStyle = "#109bfc";
+            // context.fill();
+
+            // // Контур
+            // context.lineWidth = 10;
+            // context.strokeStyle = "orange";
+            // context.stroke();
+
+
+
+
+            // context.fillStyle = "#109bfc";
+            // context.strokeStyle = "orange";
+            // context.lineWidth = 10;
+            // context.fillRect(100, 40, 100, 200);
+            // context.strokeRect(100, 40, 100, 200);
+
+
+
+            // // Толщина и цвет дуги
+            // context.lineWidth = 20;
+            // context.strokeStyle = "rgb(16,155,252)";
+
+            // // Создаем переменные для хранения информации о дуге
+            // var centerX = 150;
+            // var centerY = 200;
+            // var radius = 100;
+            // var startingAngle = 1.25 * Math.PI;
+            // var endingAngle = 1.75 * Math.PI;
+
+            // // Рисуем дугу на основе этой информации
+            // context.arc(centerX, centerY, radius, startingAngle, endingAngle);
+            // context.stroke();
+
+
+
+            // // Толщина и цвет кривой
+            // context.lineWidth = 10;
+            // context.strokeStyle = "rgb(16,155,252)";
+
+            // // Устанавливаем начало кривой
+            // context.moveTo(62, 242);
+
+            // // Контрольные и конечная точки
+            // var controlX_1 = 187;
+            // var controlY_1 = 32;
+            // var controlX_2 = 429;
+            // var controlY_2 = 480;
+            // var endPointX = 365;
+            // var endPointY = 133;
+
+            // // Рисуем кривую
+            // context.bezierCurveTo(controlX_1, controlY_1, controlX_2, controlY_2,
+            //     endPointX, endPointY);
+            // context.stroke();
+
+
+
+            // // Рисуем квадрат с левым верхним углом в (0,0) 
+            // context.rect(0, 0, 30, 30);
+
+            // // Сдвигаем систему координат вниз и вправо на 50 пикселов
+            // context.translate(50, 50);
+            // context.rect(0, 0, 30, 30);
+
+            // // Сдвигаем систему координат вниз и вправо ещё на 50 пикселов.
+            // // Преобразования суммируются, поэтому точка (0,0) 
+            // // в действительности находится в точке (100, 100)
+            // context.translate(50, 50);
+            // context.rect(0, 0, 30, 30);
+            // context.stroke();
+
+
+
+
+            //// Перемещаем точку (0,0) . Это важный шаг, 
+            // // т.к. вращение выполняется вокруг этой точки
+            // context.translate(500, 500);
+
+            // // Рисуем 9 квадратов
+            // var copies = 50;
+            // for (var i = 1; i < copies; i++) {
+            //     // Прежде чем рисовать следующий квадрат, вращаем систему координат. 
+            //     // Угол полного оборота составляет 2*Math.PI. Этот код вращает систему 
+            //     // координат для каждого нового квадрата лишь на долю этого угла, 
+            //     // выполняя полный оборот при рисовании последнего квадрата,
+            //     context.rotate(2 * Math.PI * 1 / (copies - 1));
+
+            //     // Рисуем квадрат
+            //     context.rect(0, 0, 100, 100);
+            // }
+            // context.strokeStyle = "#109bfc";
+            // context.stroke();
+
+
+
+
+            // Устанавливаем цвета заливки и контура
+            context.fillStyle = "rgb(100,150,185)";
+            context.lineWidth = 10;
+            context.strokeStyle = "red";
+
+            // Рисуем круг
+            context.arc(110, 120, 100, 0, 2 * Math.PI);
+            context.fill();
+            context.stroke();
+
+            // Не забудьте вызвать метод beginPath() перед тем,
+            // как рисовать новую фигуру
+            context.beginPath();
+
+            // Рисуем треугольник
+            context.moveTo(215, 50);
+            context.lineTo(15, 250);
+            context.lineTo(315, 250);
+            context.closePath();
+
+            // Заполняем треугольник прозрачным цветом
+            context.fillStyle = "rgba(100,150,185,0.5)";
+
+            context.fill();
+            context.stroke();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="drawingCanvas" width="1000" height="1000"></canvas>
+</body>
+
+</html>

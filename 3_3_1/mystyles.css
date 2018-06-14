@@ -1,0 +1,18 @@
+#positionBar {
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background: steelblue;
+    text-align: center;
+ }
+ 
+ #positionBar span {
+    display: inline-block;
+    margin-top: 5px;
+ }
+ 
+ #durationBar {
+    border: solid 1px black;
+    width: 100%;
+    margin-bottom: 5px;
+ }

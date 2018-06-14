@@ -1,0 +1,33 @@
+<html>
+<header>
+</header>
+
+<body>
+    <!-- функция вычисления сложения -->
+    <script>
+        function CalculateFunction(a,b, resultElName) {
+            var c = Number(a) + Number(b);
+            document.getElementById(resultElName).value = c;
+        }
+    </script>
+
+    <!-- форма с аргументами -->
+    <form action="#" id="CalculatorForm">
+        <label for="number1">Число 1:</label>
+        <input name="number1">
+        <br>
+
+        <label for="number2">Число 2:</label>
+        <input name="number2">
+        <br>
+
+        <input type="button" name="calc" value="Сложить" onclick="CalculateFunction(this.form.number1.value, this.form.number2.value, 'result')"/>
+        </p>
+    </form>
+
+    <!-- поле с результатом -->
+    <p>Результат: <output id="result" form="CalculatorForm"
+        for="number1 number2"></output></p>  
+</body>
+
+</html>

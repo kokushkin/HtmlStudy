@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <meta charset="utf-8">
+    <script src="videoScript.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+</header>
+
+<body>
+    <video id="videoPlayer" width="600" height="400" onTimeUpdate="progressUpdate()">
+        <source src="6394002f-e9d8-4e52-b615-f131d1757310_360.mp4" type="video/mp4">
+        <!-- <source src="video.ogv" type="video/ogg"> -->
+    </video>
+    <div class="barContainer">
+        <div id="durationBar">
+            <div id="positionBar">
+                <span id="displayStatus">0</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="speedUp()">Быстрей</button>
+        <button onclick="slowDown()">Медленее</button>
+        <button onclick="normalSpeed()">Нормальная скорость</button>
+    </div>
+</body>

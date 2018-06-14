@@ -1,0 +1,23 @@
+body {
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+div {
+    margin: 20px;
+    border: black 1px solid;
+    padding: 10px;
+    background-color: #FBF3CB;
+}
+
+input {
+    width: 75px;
+}
+
+#result {
+    color: darkred;
+    font-weight: bold;
+}
+button {
+    padding:6px;
+}

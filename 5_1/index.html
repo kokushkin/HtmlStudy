@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Веб-хранилище</legend>
+        <label for="localData">Этот текст сохранится в локальном хранилище:</label>
+        <input id="localData">
+        <br>
+        <label for="sessionData">Этот текст сохранится в хранилище данных сессии:</label>
+        <input id="sessionData">
+    </fieldset>
+    <div>
+        <button onclick="saveData()">Сохранить</button>
+        <button onclick="loadData()">Загрузить</button>
+    </div>
+    <script>
+        function saveData() {
+            // Получаем значения текстовых полей
+            var localData = document.getElementById("localData").value;
+            var sessionData = document.getElementById("sessionData").value;
+
+            // Сохраняем текст, введенный в текстовом поле, в локальном хранилище
+            localStorage["localData"] = localData;
+
+            // Сохраняем текст, введенный в текстовом поле, в хранилище сессий
+            sessionStorage["sessionData"] = sessionData;
+        }
+
+        function loadData() {
+            // Загружаем сохраненные данные из хранилищ
+            var localData = localStorage["localData"];
+            var sessionData = sessionStorage["sessionData"];
+
+            // Отображаем эти данные в текстовых полях
+            if (localData != null) {
+                document.getElementById("localData").value = localData;
+            }
+            if (sessionData != null) {
+                document.getElementById("sessionData").value = sessionData;
+            }
+        }</script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+
+<body>
+    <script>
+        function validateComments(input) {
+            if (input.value.length < 20) {
+                input.setCustomValidity("Дайте более развернутый ответ.");
+            }
+            else {
+                // Длина комментария отвечает требованию, 
+                // поэтому очищаем сообщение об ошибке
+                input.setCustomValidity("");
+            }
+        }
+    </script>
+    <!-- <form action="#"> -->
+    <form action="https://echo.htmlacademy.ru" method="GET">
+        <p>
+            <i>Пожалуйста, заполните форму. Обязательные поля помечены </i>
+            <em>*</em>
+        </p>
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label for="name">Имя
+                <em>*</em>
+            </label>
+            <input id="name" name="name" placeholder="Иван Иванов" autofocus required pattern="[a-zA-Z]+\s+[a-zA-Z]+">
+            <br>
+            <label for="telephone">Телефон</label>
+            <input id="telephone" name="telephone" type="tel" placeholder="+7 (xxx) xxx-xxxx" required>
+            <br>
+            <label for="email">Email
+                <em>*</em>
+            </label>
+            <input type="email" id="email" name="email" multiple>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <label for="age">
+                <!-- Возраст -->
+                Дата рождения
+                <em>*</em>
+            </label>
+            <!-- <input id="age" type="number" min="18" max="120" step="0.1"> -->
+            <!-- <input id="age" type="range" min="18" max="120" step="0.1"> -->
+            <input id="age" name="age" type="date" min="1920-01-01" max="2000-01-01">
+            <br>
+            <br>
+            <label for="gender">Пол</label>
+            <select id="gender" name="gender">
+                <option value="female">Женщина</option>
+                <option value="male">Мужчина</option>
+            </select>
+            <br>
+            <label for="comments">Перечислите личные качества</label>
+            <textarea id="comments" name="comments" oninput="validateComments(this)" spellcheck="true"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Выберите ваших любимых животных</legend>
+            <label for="zebra">
+                <input id="zebra" name="zebra" type="checkbox"> Зебра</label>
+            <label for="cat">
+                <input id="cat" name="cat" type="checkbox"> Кошак</label>
+            <label for="anaconda">
+                <input id="anaconda" type="checkbox"> Анаконда</label>
+            <label for="human">
+                <input id="human" type="checkbox"> Человек</label>
+            <label for="elephant">
+                <input id="elephant" type="checkbox"> Слон</label>
+            <label for="wildebeest">
+                <input id="wildebeest" type="checkbox"> Антилопа</label>
+            <label for="pigeon">
+                <input id="pigeon" type="checkbox"> Голубь</label>
+            <label for="crab">
+                <input id="crab" type="checkbox"> Краб</label>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите любимый цвет</legend>
+            <label for="mycolor">Цвет</label>
+            <input id="mycolor" type="color" name="color">
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Выберете юбимый фрукт</legend>
+            <label for="fruit">Фрукт</label>
+            <input id="fruit" list="dl_fruits" name="fruit">
+            <datalist id="dl_fruits">
+                <option label="Яблоко" value="apple">
+                <option label="Ананас" value="ananas">
+                <option label="Абрикос" value="apricot">
+                <option label="Арбуз" value="watermelon">
+                <option label="Авокадо" value="avocado">
+                <option label="Апельсин" value="Orange">
+            </datalist>
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить информацию">
+        </p>
+        <progress>Расчет выполняется...</progress>
+        Ваш багаж весит: <meter min="5" max="100" high="70" value="79">79 килограм</meter>*
+    </form>
+</body>
+
+</html>

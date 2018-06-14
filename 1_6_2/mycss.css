@@ -1,0 +1,150 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
+    max-width: 1000px;
+    margin:0 auto;
+  }
+  
+  /* Форматируем элемент <div>, который представляет верхний колонтитул 
+     (как блок с рамкой и синей заливкой) */
+  header {
+    background-color: #7695FE;
+    border: thin #336699 solid;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  /* Форматируем все заголовки <hl> в элементе <div>
+     верхнего колонтитула (заголовок статьи) и т.д */
+  header h1 {
+    margin: 0px;
+    color: white;
+    font-size: xx-large;
+  }
+  
+  header .Teaser {
+    margin: 0px;
+    font-weight: bold;
+  }
+  
+  header .Byline {
+    font-style: italic;
+    font-size: small;
+    margin: 0px;
+  }
+  
+  .Content {
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 120%;
+  }
+  
+  .Content .LeadIn {
+    font-weight: bold;
+    font-size: large;
+    font-variant: small-caps;
+  }
+  
+  .Content h2 {
+    color: #24486C;
+    margin-bottom: 2px;
+    font-size: medium;
+  }
+  
+  .Content p {
+    margin-top: 0px;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: x-small;	
+  }
+  
+  footer .Disclaimer {
+    font-style: italic;
+  }
+  
+  footer p {
+    margin: 3px;
+  }
+
+
+  /* Форматируем блок плавающего рисунка. */ 
+/* .FloatFigure { 
+  float:left;
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:20px;
+  margin-bottom:0px;
+} */
+
+/* Форматирует текст подписи к рисунку */ 
+/* .FloatFigure p {
+  max-width:225px; 
+  font-size:small;
+  font-style:italic; 
+  margin-bottom:5px;
+} */
+
+figure { 
+  float:left;
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:20px;
+  margin-bottom:0px;
+}
+
+/* Форматирует текст подписи к рисунку */ 
+figure figcaption {
+  max-width:225px; 
+  font-size:small;
+  font-style:italic; 
+  margin-bottom:5px;
+}
+
+aside {
+  float: right;
+  max-width: 300px;
+  border-top: thin black solid;
+  border-bottom: thick black solid;
+  font-size: 20px;
+  line-height: 130%;
+  font-style: italic;
+  padding-top: 5px;	
+  padding-bottom: 5px;	
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+aside img {
+  width:40px;
+  height:30px;
+  vertical-align: bottom;
+}
+
+nav {
+  margin:10px;
+  max-width:1000px;	
+background-color:#FF6633;
+text-align:center;
+}
+
+nav ul {
+list-style:none;
+display: inline-block;
+}
+
+nav ul li {
+  float:left;	
+margin:0px 10px 0px 10px;
+}
+
+nav ul a {
+text-decoration:none;
+  display:block;	
+color:#FFFFFF;
+}

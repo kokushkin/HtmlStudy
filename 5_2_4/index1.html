@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <a href="index2.html">Go to index2</a>
+    <fieldset>
+        <legend>Веб-хранилище</legend>
+        <label for="key">Ключ:</label>
+        <input id="key">
+        <br>
+        <label for="item">Значение:</label>
+        <input id="item">
+    </fieldset>
+    <div>
+        <button onclick="addValue()">Добавить</button>
+    </div>
+    <script>
+        function addValue() {
+            // Получаем значения из обоих текстовых полей
+            var key = document.getElementById("key").value;
+            var item = document.getElementById("item").value;
+
+            // Сохраняем элемент в локальном хранилище.
+            // Если ключ уже существует, новый элемент заменяет старый
+            localStorage[key] = item;
+        }       
+    </script>
+</body>
+
+</html>

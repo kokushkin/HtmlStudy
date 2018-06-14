@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Canvas</title>
+</head>
+
+<body>
+    <div class="CanvasContainer">
+        <canvas id="drawingCanvas" width="500" height="340"></canvas>
+    </div>
+    <div>
+        <button onclick="addBall()">Добавить мячик</button>
+        <button onclick="clearBalls()">Очистить холст</button>
+    </div>
+    <div>
+        Размер мячика:
+        <input id="ballSize" type="number" min="0" max="50" value="15">
+        <input id="connectedBalls" type="checkbox">Добавить соединяющие линии
+        <br>
+    </div>
+    <script src="paintScript.js"></script>
+</body>
+
+</html>

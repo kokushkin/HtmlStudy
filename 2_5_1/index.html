@@ -1,0 +1,30 @@
+<html>
+<header>
+
+</header>
+
+<body>
+    <script>
+        function startEdit() {
+            // Включаем редактирование элемента.
+            var element = document.getElementById("editableDiv");
+            element.contentEditable = true;
+        }
+
+        function stopEdit() {
+            // Отключаем редактирование элемента.
+            var element = document.getElementById("editableDiv");
+            element.contentEditable = false;
+
+            // Выводим редактируемый текст в окне сообщения
+            alert("Ваш отредактированный текст: \n" + element.innerHTML);
+        }
+    </script>
+    <div id="editableDiv">Вы можете редактировать этот текст.</div>
+    <div>
+        <button onclick="startEdit()">Запустить редактирование</button>
+        <button onclick="stopEdit()">Остановить редактирование</button>
+    </div>
+</body>
+
+</html>

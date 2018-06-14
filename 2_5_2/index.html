@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+<header>
+    <meta charset="utf-8">
+</header>
+
+<body>
+    <script>
+        function startEdit() {
+            // Включаем редактирование в элементе <iframe>
+            var editor = document.getElementById("pageEditor");
+            editor.contentWindow.document.designMode = "on";
+        }
+
+        function stopEdit() {
+            // Отключаем редактирование в элементе <iframe>
+            var editor = document.getElementById("pageEditor");
+            editor.contentWindow.document.designMode = "off";
+
+            // Отображаем отредактированную разметку
+            var htmlDisplay = document.getElementById("editedHTML");
+            htmlDisplay.textContent = editor.contentWindow.document.body.innerHTML;
+        }
+    </script>
+    <h1>Редактируемая страница</h1>
+    <iframe id="pageEditor" src="../1_6_2/index.html" width="100%"></iframe>
+    <div>
+        <button onclick="startEdit()">Запустить редактирование</button>
+        <button onclick="stopEdit()">Остановить редактирование</button>
+    </div>
+
+    <h1>Разметка</h1>
+    <div id="editedHTML"></div>
+</body>
+
+</html>

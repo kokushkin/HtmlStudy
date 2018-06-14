@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+    <button onclick="showFileInput()">Добавить файл</button>
+    <div id="fileOutput"></div>
+</body>
+<script>
+    function processFiles(files) {
+        var file = files[0];
+        var reader = new FileReader();
+        reader.readAsText(file);
+
+        reader.onload = function (e) {
+            // Когда это событие активируется, данные готовы.
+            // Вставляем их в страницу в элемент <div>
+            var output = document.getElementById("fileOutput");
+            output.textContent = e.target.result;
+        };
+    }
+    function showFileInput() {
+        var fileInput = document.getElementById("fileInput");
+        fileInput.click();
+    }
+</script>
+
+</html>
